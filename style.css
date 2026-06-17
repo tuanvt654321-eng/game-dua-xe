@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    background-color: #111;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#gameContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 450px; /* Tối ưu cho màn hình dọc điện thoại */
+    margin: 0 auto;
+    background: #222;
+}
+
+#scoreboard {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 10;
+    border: 1px solid #444;
+}
+
+#roadCanvas {
+    display: block;
+    width: 100%;
+    height: 70%; /* Dành 30% phía dưới cho các nút điều khiển */
+    background: #333;
+}
+
+/* Giao diện nút bấm điều khiển */
+#controls {
+    width: 100%;
+    height: 30%;
+    background: #222;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px solid #444;
+}
+
+.control-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.ctrl-btn {
+    background: #444;
+    color: white;
+    border: 2px solid #666;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 85px;
+    margin: 0 5px;
+    box-shadow: 0 4px #222;
+}
+
+.ctrl-btn:active {
+    background: #ff9800;
+    box-shadow: 0 1px #222;
+    transform: translateY(3px);
+}
+
+#btnUp {
+    background: #4caf50;
+    min-width: 180px;
+}
+
+#btnDown {
+    background: #f44336;
+}
+
+/* Màn hình kết thúc */
+#gameOverScreen {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 70%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 20;
+}
+
+#gameOverScreen h1 {
+    color: #ff4336;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255,0,0,0.5);
+}
+
+#gameOverScreen p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#btnRestart {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}

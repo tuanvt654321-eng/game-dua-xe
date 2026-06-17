@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Game Đua Xe Cực Hạn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="scoreboard">
+            <div>ĐIỂM: <span id="scoreVal">0</span></div>
+            <div>TỐC ĐỘ: <span id="speedVal">0</span> km/h</div>
+        </div>
+
+        <canvas id="roadCanvas"></canvas>
+
+        <div id="gameOverScreen" class="hidden">
+            <h1>GAME OVER</h1>
+            <p>Điểm của bạn: <span id="finalScore">0</span></p>
+            <button id="btnRestart">CHƠI LẠI</button>
+        </div>
+
+        <div id="controls">
+            <div class="control-row">
+                <button id="btnUp" class="ctrl-btn">▲ TĂNG TỐC</button>
+            </div>
+            <div class="control-row">
+                <button id="btnLeft" class="ctrl-btn">◀ TRÁI</button>
+                <button id="btnDown" class="ctrl-btn">▼ PHANH</button>
+                <button id="btnRight" class="ctrl-btn">PHẢI ▶</button>
+            </div>
+        </div>
+    </div>
+
+    <script href="game.js" src="game.js"></script>
+</body>
+</html>
